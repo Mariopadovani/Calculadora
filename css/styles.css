@@ -1,0 +1,75 @@
+* { /*Seleciona todos os elementos da pagina */
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: Helvetica;
+}
+body{
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+#calc{
+    width: 400px;
+    padding: .5em;
+    background-color: #c4c4c4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+#calc h3{
+    font-size: .8em;
+    font-weight: 300;
+    color: #666;
+}
+#operations{
+    text-align: right;
+}
+#operacao-anterior, /*Como as id's possuem regras em comum, pode ser feito isso para deixar mais limpo */
+#operacao-atual {
+    min-height: 1.6em; /*vai prever o tamanho pra evitar os números ficarem subindo*/
+    padding: .2em;
+    overflow-wrap: break-word;/*quebra de linha*/ 
+}
+#operacao-anterior{
+    color: #777;
+}
+#operacao-atual{
+    
+    font-size: 3em;
+    font-weight: 700;
+    
+}
+#botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*defina as colunas */
+    gap: 3px;
+}
+#botoes button{
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+#botoes .numeros{
+    background-color: #f3f3f3;
+
+}
+
+#botoes .numeros:hover{
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#botoes #botao-igual{
+    grid-column: span 2; /*Ocupa dois espaços na linha */
+    background-color: aquamarine;
+    
+}
+#botoes #botao-igual:hover{
+    background-color: aqua;
+}
